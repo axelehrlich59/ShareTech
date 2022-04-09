@@ -2,6 +2,12 @@ import React from "react";
 import styled from 'styled-components'
 import Logo from "../assets/logo.png"
 import Button from "./Button";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
 const NavbarTop = styled.div`
   display: flex;
@@ -15,17 +21,18 @@ const SectionContent = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%;
+  width: 100%;
   color: white;
 `
 const NavItemsContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 20%;
+  width: 30%;
 `
 const NavItem = styled.div`
   display: flex;
+  cursor: pointer;
 `
 const LogoContainer = styled.div`
   width: 55px;
@@ -40,24 +47,29 @@ const Navbar = ({
 
 
   return (
-    <NavbarTop>
-      <SectionContent>
-        <LogoContainer>
-          <Img src={Logo}/>
-        </LogoContainer>
-        <NavItemsContainer>
-          <NavItem>Home</NavItem>
-          <NavItem>About</NavItem>
-          <Button
-            text={"Connexion"}
-            backgroundColor={""}
-            textColor={"#FFFFFF"}
-            isHoverActive={true}
-            borderColor={"#FFFFFF"}
-          />
-        </NavItemsContainer>
-      </SectionContent>
-    </NavbarTop>
+    <Router>
+      <NavbarTop>
+        <SectionContent>
+          <LogoContainer>
+            <Img src={Logo}/>
+          </LogoContainer>
+          <NavItemsContainer>
+            <Link to="/"><NavItem>Acceuil</NavItem></Link>
+            <Link to="/About"><NavItem>A propos</NavItem></Link>
+            <Link to="/Profil"><NavItem>Profil</NavItem></Link>
+            <Button
+              text={"Connexion"}
+              backgroundColor={""}
+              textColor={"#FFFFFF"}
+              isHoverActive={true}
+              hoverColorText={"black"}
+              IsHoverBackgroundWhite={true}
+              borderColor={"#FFFFFF"}
+            />
+          </NavItemsContainer>
+        </SectionContent>
+      </NavbarTop>
+    </Router>
   )
 }
 

@@ -1,5 +1,6 @@
 import React from "react";
-import {styled} from "styled-components";
+import styled, {css} from "styled-components";
+
 
 const ButtonStyle = styled.div`
   display: flex;
@@ -11,9 +12,10 @@ const ButtonStyle = styled.div`
   color: ${({textColor}) => textColor};
   ${({isHoverActive}) => isHoverActive && css`
       &:hover {
-        background: 'red';
+        background: ${({IsHoverBackgroundWhite}) => IsHoverBackgroundWhite ? "white" : ""};
+        color: ${({hoverColorText}) => hoverColorText};
       }
-   `}
+  `}
   border-radius: 5px;
   border: solid 1px ${({borderColor}) => borderColor};
   cursor: pointer;
@@ -24,6 +26,8 @@ const Button = ({
   backgroundColor,
   textColor,
   isHoverActive,
+  IsHoverBackgroundWhite,
+  hoverColorText,
   borderColor,
 }) => {
 
@@ -33,6 +37,9 @@ const Button = ({
       backgroundColor={backgroundColor}
       textColor={textColor}
       borderColor={borderColor}
+      isHoverActive={isHoverActive}
+      IsHoverBackgroundWhite={IsHoverBackgroundWhite}
+      hoverColorText={hoverColorText}
     >
       {text}
     </ButtonStyle>
