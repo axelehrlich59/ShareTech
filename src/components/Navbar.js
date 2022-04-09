@@ -1,6 +1,6 @@
 import React from "react";
 import styled from 'styled-components'
-import Logo from "../assets/logo.png"
+import Logo from "../assets/network.png"
 import Button from "./Button";
 import { Link } from "react-router-dom";
 
@@ -20,7 +20,7 @@ const NavbarTop = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
-  height: 9%;
+  height: 8%;
   background-color: #292D3E;
   font-family: Roboto, sans-serif
 `
@@ -35,7 +35,7 @@ const NavItemsContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 35%;
+  width: 28%;
 `
 const NavItem = styled.div`
   display: flex;
@@ -56,15 +56,24 @@ const NavItem = styled.div`
   }
   
 `
-const LogoContainer = styled.div`
+
+const StyledLinkLogo = styled(Link)`
+  text-decoration: none;
   display: flex;
   align-items: center; 
-  justify-content: center;
-  width: 5%;
+  justify-content: space-between;
+  width: 12%;
+  margin-left: 5px;
 `
+
 const Img = styled.img`
-  width: 55px;
+  width: 53px;
   border-radius: 15%;
+`
+const TextLogo = styled.div`
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
 `
 
 
@@ -75,13 +84,11 @@ const Navbar = ({
   return (
     <NavbarTop>
       <SectionContent>
-        <LogoContainer>
+        <StyledLinkLogo to="">
           <Img src={Logo}/>
-        </LogoContainer>
+          <TextLogo>ShareTech</TextLogo>
+        </StyledLinkLogo>
         <NavItemsContainer>
-          <StyledLink className="styledLink" to="/">
-            <NavItem>Home</NavItem>
-          </StyledLink>
           <StyledLink className="styledLink" to="/AboutUs">
             <NavItem>A propos</NavItem>
           </StyledLink>
