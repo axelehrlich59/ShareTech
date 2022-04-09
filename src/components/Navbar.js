@@ -44,7 +44,7 @@ const NavItem = styled.div`
   width: 85px;
   height: 40px;
   cursor: pointer;
-  border: 1px solid white;
+  border: 1.5px solid white;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   border-bottom-left-radius: 15px;

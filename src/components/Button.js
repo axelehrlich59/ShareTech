@@ -18,7 +18,7 @@ const ButtonStyle = styled.div`
       }
   `}
   border-radius: 5px;
-  border: solid 1px ${({borderColor}) => borderColor};
+  border: solid 1.5px ${({borderColor}) => borderColor};
   cursor: pointer;
 `
 
