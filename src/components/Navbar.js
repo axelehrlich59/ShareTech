@@ -2,12 +2,15 @@ import React from "react";
 import styled from 'styled-components'
 import Logo from "../assets/logo.png"
 import Button from "./Button";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
+
+const StyledLink = styled(Link)`
+  text-decoration: none;
+
+  &:focus, &:hover, &:visited, &:link, &:active {
+    text-decoration: none;
+  }
+`
 
 const NavbarTop = styled.div`
   display: flex;
@@ -47,29 +50,33 @@ const Navbar = ({
 
 
   return (
-    <Router>
-      <NavbarTop>
-        <SectionContent>
-          <LogoContainer>
-            <Img src={Logo}/>
-          </LogoContainer>
-          <NavItemsContainer>
-            <Link to="/"><NavItem>Acceuil</NavItem></Link>
-            <Link to="/About"><NavItem>A propos</NavItem></Link>
-            <Link to="/Profil"><NavItem>Profil</NavItem></Link>
-            <Button
-              text={"Connexion"}
-              backgroundColor={""}
-              textColor={"#FFFFFF"}
-              isHoverActive={true}
-              hoverColorText={"black"}
-              IsHoverBackgroundWhite={true}
-              borderColor={"#FFFFFF"}
-            />
-          </NavItemsContainer>
-        </SectionContent>
-      </NavbarTop>
-    </Router>
+    <NavbarTop>
+      <SectionContent>
+        <LogoContainer>
+          <Img src={Logo}/>
+        </LogoContainer>
+        <NavItemsContainer>
+          <StyledLink to="/">
+            <NavItem>Home</NavItem>
+          </StyledLink>
+          <StyledLink to="/AboutUs">
+            <NavItem>A propos</NavItem>
+          </StyledLink>
+          <StyledLink to="/Profil">
+            <NavItem>Profil</NavItem>
+          </StyledLink>
+          <Button
+            text={"Connexion"}
+            backgroundColor={""}
+            textColor={"#FFFFFF"}
+            isHoverActive={true}
+            hoverColorText={"black"}
+            IsHoverBackgroundWhite={true}
+            borderColor={"#FFFFFF"}
+          />
+        </NavItemsContainer>
+      </SectionContent>
+    </NavbarTop>
   )
 }
 

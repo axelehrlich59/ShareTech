@@ -14,6 +14,7 @@ const ButtonStyle = styled.div`
       &:hover {
         background: ${({IsHoverBackgroundWhite}) => IsHoverBackgroundWhite ? "white" : ""};
         color: ${({hoverColorText}) => hoverColorText};
+        transition: 0.4s;
       }
   `}
   border-radius: 5px;
