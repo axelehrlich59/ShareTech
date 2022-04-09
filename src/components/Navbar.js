@@ -22,7 +22,9 @@ const NavbarTop = styled.div`
   width: 100%;
   height: 8%;
   background-color: #292D3E;
-  font-family: Roboto, sans-serif
+  font-family: Roboto, sans-serif;
+  top: 0;
+  position: sticky;
 `
 const SectionContent = styled.div`
   display: flex;
