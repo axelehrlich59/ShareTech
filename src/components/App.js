@@ -1,8 +1,8 @@
 import React from "react";
 import Navbar from "./Navbar.js"
-import Home from "./Home.js"
 import About from "./About.js";
 import Profil from "./Profil.js";
+import Connection from "./Connection.js";
 import styled from 'styled-components'
 import '../index.css'
 import {
@@ -10,6 +10,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+
 
 const MainContainer = styled.div`
   margin: 0;
@@ -25,6 +26,7 @@ function App() {
           <Route path="/" element={""} />
           <Route path="/AboutUs" element={<About />} />
           <Route path="/Profil" element={<Profil />} />
+          <Route path="/Connexion" element={<Connection />} />
         </Routes>
       </Router>
     </MainContainer>

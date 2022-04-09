@@ -6,10 +6,14 @@ import { Link } from "react-router-dom";
 
 const StyledLink = styled(Link)`
   text-decoration: none;
-
+  color: white;
   &:focus, &:hover, &:visited, &:link, &:active {
     text-decoration: none;
   }
+`
+
+const StyledLinkButton = styled(Link)`
+  text-decoration: none;
 `
 
 const NavbarTop = styled.div`
@@ -31,17 +35,36 @@ const NavItemsContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 30%;
+  width: 35%;
 `
 const NavItem = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 85px;
+  height: 40px;
   cursor: pointer;
+  border: 1px solid white;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  &:hover {
+    transition: 0.3s;
+    background-color: white;
+    color: black;
+  }
+  
 `
 const LogoContainer = styled.div`
-  width: 55px;
+  display: flex;
+  align-items: center; 
+  justify-content: center;
+  width: 5%;
 `
 const Img = styled.img`
-  width: 73px;
+  width: 55px;
+  border-radius: 15%;
 `
 
 
@@ -56,24 +79,26 @@ const Navbar = ({
           <Img src={Logo}/>
         </LogoContainer>
         <NavItemsContainer>
-          <StyledLink to="/">
+          <StyledLink className="styledLink" to="/">
             <NavItem>Home</NavItem>
           </StyledLink>
-          <StyledLink to="/AboutUs">
+          <StyledLink className="styledLink" to="/AboutUs">
             <NavItem>A propos</NavItem>
           </StyledLink>
-          <StyledLink to="/Profil">
+          <StyledLink className="styledLink" to="/Profil">
             <NavItem>Profil</NavItem>
           </StyledLink>
-          <Button
-            text={"Connexion"}
-            backgroundColor={""}
-            textColor={"#FFFFFF"}
-            isHoverActive={true}
-            hoverColorText={"black"}
-            IsHoverBackgroundWhite={true}
-            borderColor={"#FFFFFF"}
-          />
+          <StyledLinkButton to="/Connexion">
+            <Button
+              text={"Connexion"}
+              backgroundColor={""}
+              textColor={"#FFFFFF"}
+              isHoverActive={true}
+              hoverColorText={"black"}
+              IsHoverBackgroundWhite={true}
+              borderColor={"#FFFFFF"}
+            />
+          </StyledLinkButton>
         </NavItemsContainer>
       </SectionContent>
     </NavbarTop>
