@@ -24,7 +24,7 @@ const NavbarTop = styled.div`
   width: 100%;
   height: 8%;
   background-color: #292D3E;
-  font-family: Roboto, sans-serif;
+  font-family: 'DM Sans';
   top: 0;
   position: sticky;
   @media screen and (max-width: 720px) {
@@ -116,7 +116,7 @@ const BurgerMenuItems = styled.div`
     height: 35%;
     font-size: 18px;
     font-weight: bold;
-    font-family: Roboto, sans-serif;
+    font-family: 'DM Sans';
   }
 `
 

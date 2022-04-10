@@ -14,6 +14,7 @@ import {
 
 const MainContainer = styled.div`
   margin: 0;
+  font-family: 'DM Sans';
   height: 100vh;
   @media screen and (max-width: 720px) {
     width: 100%;
