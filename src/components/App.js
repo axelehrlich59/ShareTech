@@ -15,6 +15,9 @@ import {
 const MainContainer = styled.div`
   margin: 0;
   height: 100vh;
+  @media screen and (max-width: 720px) {
+    width: 100%;
+  }
 `
 
 function App() {

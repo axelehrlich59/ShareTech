@@ -18,11 +18,19 @@ const AboutMessageContainer = styled.div`
   width: 40%;
   height: 40%;
   border-bottom: 3px solid black;
+  @media screen and (max-width: 720px) {
+    width: 80%;
+    height: 90%;
+    border: none;
+  } 
 `
 const AboutMessageTitleContainer = styled.div`
   display: flex;
   height: 50%;
   text-align: center;
+  @media screen and (max-width: 720px) {
+    border-bottom: 3px solid black;
+  }
 `
 const AboutMessageTitle = styled.h1`
   display: flex;
