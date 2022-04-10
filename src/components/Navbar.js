@@ -191,9 +191,16 @@ const Navbar = ({
         </BurgerIcon>
       </NavbarTop>
       {showBurgerMenu && <BurgerMenuContainer>
-        <BurgerMenuItems>A propos</BurgerMenuItems>
-        <BurgerMenuItems>Profil</BurgerMenuItems>
-        <BurgerMenuItems>Connexion</BurgerMenuItems>
+        <BurgerMenuItems>
+          <StyledLink to="/AboutUs">A propos</StyledLink>
+        </BurgerMenuItems>
+        <BurgerMenuItems>
+          <StyledLink to="/Profil">Profil</StyledLink>
+        </BurgerMenuItems>
+        <BurgerMenuItems>
+          <StyledLink to="/Connexion">Connexion</StyledLink>
+        </BurgerMenuItems>
+        
       </BurgerMenuContainer>}
     </>
   )
