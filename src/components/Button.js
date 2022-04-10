@@ -20,6 +20,11 @@ const ButtonStyle = styled.div`
   border-radius: 5px;
   border: solid 1.5px ${({borderColor}) => borderColor};
   cursor: pointer;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 150px;
+    height: 50px;
+    font-size: 22px;
+  }
 `
 
 const Button = ({

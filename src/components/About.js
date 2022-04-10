@@ -23,6 +23,10 @@ const AboutMessageContainer = styled.div`
     height: 90%;
     border: none;
   } 
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 70%;  
+    height: 50%;
+  }
 `
 const AboutMessageTitleContainer = styled.div`
   display: flex;
@@ -31,6 +35,9 @@ const AboutMessageTitleContainer = styled.div`
   @media screen and (max-width: 720px) {
     border-bottom: 3px solid black;
   }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    height: 55%;  
+  }
 `
 const AboutMessageTitle = styled.h1`
   display: flex;
@@ -38,6 +45,9 @@ const AboutMessageTitle = styled.h1`
   color: black;
   font-family: 'DM Sans';
   font-size: 42px;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 54px;
+  }
 `
 const AboutMessageBodyContainer = styled.h2`
   display: flex;
@@ -45,6 +55,9 @@ const AboutMessageBodyContainer = styled.h2`
   flex-direction: column;
   color: black;
   font-family: 'DM Sans';
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 29px;
+  }
 `
 const AboutMessage = styled.div`
   display: flex;

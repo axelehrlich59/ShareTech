@@ -27,7 +27,6 @@ const NavbarTop = styled.div`
   font-family: Roboto, sans-serif;
   top: 0;
   position: sticky;
-  overflow: hidden;
   @media screen and (max-width: 720px) {
     width: 100%;
     height: 10%;
@@ -39,6 +38,10 @@ const SectionContent = styled.div`
   align-items: center;
   width: 100%;
   color: white;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 100%;  
+    margin-right: 15px;
+  }
   @media screen and (max-width: 720px) {
     display: flex;
     justify-content: center;
@@ -50,6 +53,10 @@ const NavItemsContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   width: 28%;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 50%;  
+    justify-content: space-between;
+  }
   @media screen and (max-width: 720px) {
     display: none;
   }
@@ -71,7 +78,11 @@ const NavItem = styled.div`
     background-color: white;
     color: black;
   }
-  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 100px;
+    height: 50px;
+    font-size: 22px;  
+  }
 `
 const BurgerIcon = styled.div`
   display: none;
@@ -121,11 +132,18 @@ const StyledLinkLogo = styled(Link)`
 const Img = styled.img`
   width: 53px;
   border-radius: 15%;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 60px;
+    margin-right: 10px;
+  }
 `
 const TextLogo = styled.div`
   color: white;
   font-size: 1.2rem;
   font-weight: bold;
+  @media (min-width: 768px) and (max-width: 1024px) {
+    font-size: 1.6rem; 
+  }
 `
 
 
