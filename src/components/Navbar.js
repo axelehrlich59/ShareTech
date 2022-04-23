@@ -54,7 +54,6 @@ const NavItemsContainer = styled.div`
   justify-content: space-around;
   align-items: center;
   @media (min-width: 768px) and (max-width: 1024px) {
-    width: 50%;  
     justify-content: space-between;
   }
   @media screen and (max-width: 720px) {
@@ -154,7 +153,6 @@ const Navbar = ({
 }) => {
 
   const [showBurgerMenu, setShowBurgerMenu] = useState(false)
-  const [hideButtonConnection, setHideButtonConnection] = useState(true)
   const location = useLocation();
 
   const onClickBurgerIcon = () => {

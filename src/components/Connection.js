@@ -18,6 +18,12 @@ const ContainerConnection = styled.div`
   width: 50%;
   height: 70%;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  @media screen and (max-width: 720px) {
+    width: 90%;
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    width: 90%;
+  }
 `
 const MainContainerItems = styled.div`
   display: flex;
