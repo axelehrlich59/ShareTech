@@ -19,12 +19,14 @@ const ButtonStyle = styled.div`
   `}
   border-radius: 5px;
   border: solid 1.5px ${({borderColor}) => borderColor};
+  border: ${({hideBorder}) => hideBorder ? "none" : "solid 1.5px white"};
   cursor: pointer;
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 150px;
     height: 50px;
     font-size: 22px;
   }
+  box-shadow: ${({boxShadowIsActive}) => boxShadowIsActive ? "rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;": ""};
 `
 
 const Button = ({
@@ -35,6 +37,8 @@ const Button = ({
   IsHoverBackgroundWhite,
   hoverColorText,
   borderColor,
+  hideBorder,
+  boxShadowIsActive,
 }) => {
 
 
@@ -46,6 +50,8 @@ const Button = ({
       isHoverActive={isHoverActive}
       IsHoverBackgroundWhite={IsHoverBackgroundWhite}
       hoverColorText={hoverColorText}
+      hideBorder={hideBorder}
+      boxShadowIsActive={boxShadowIsActive}
     >
       {text}
     </ButtonStyle>

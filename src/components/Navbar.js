@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from 'styled-components'
 import Logo from "../assets/network.png"
 import Button from "./Button";
-import { Link } from "react-router-dom";
+import { Link, useLocation  } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+import { isConnectionPage } from "../utils/functions.js"
 
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -52,7 +53,6 @@ const NavItemsContainer = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 28%;
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 50%;  
     justify-content: space-between;
@@ -67,6 +67,7 @@ const NavItem = styled.div`
   align-items: center;
   width: 85px;
   height: 40px;
+  margin: 10px;
   cursor: pointer;
   border: 1.5px solid white;
   border-top-left-radius: 15px;
@@ -153,10 +154,14 @@ const Navbar = ({
 }) => {
 
   const [showBurgerMenu, setShowBurgerMenu] = useState(false)
+  const [hideButtonConnection, setHideButtonConnection] = useState(true)
+  const location = useLocation();
 
   const onClickBurgerIcon = () => {
     setShowBurgerMenu(previousState => !previousState)
   }
+
+
 
   return (
     <>
@@ -174,7 +179,7 @@ const Navbar = ({
               <NavItem>Profil</NavItem>
             </StyledLink>
             <StyledLinkButton to="/Connexion">
-              <Button
+              {location.pathname !== "/Connexion" && <Button
                 text={"Connexion"}
                 backgroundColor={""}
                 textColor={"#FFFFFF"}
@@ -182,7 +187,7 @@ const Navbar = ({
                 hoverColorText={"black"}
                 IsHoverBackgroundWhite={true}
                 borderColor={"#FFFFFF"}
-              />
+              />}
             </StyledLinkButton>
           </NavItemsContainer>
         </SectionContent>
