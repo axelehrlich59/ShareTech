@@ -66,7 +66,7 @@ const NavItem = styled.div`
   align-items: center;
   width: 85px;
   height: 40px;
-  margin: 10px;
+  margin: 5px;
   cursor: pointer;
   border: 1.5px solid white;
   border-top-left-radius: 15px;
@@ -179,6 +179,17 @@ const Navbar = ({
             <StyledLinkButton to="/Connexion">
               {location.pathname !== "/Connexion" && <Button
                 text={"Connexion"}
+                backgroundColor={""}
+                textColor={"#FFFFFF"}
+                isHoverActive={true}
+                hoverColorText={"black"}
+                IsHoverBackgroundWhite={true}
+                borderColor={"#FFFFFF"}
+              />}
+            </StyledLinkButton>
+            <StyledLinkButton to="/Inscription">
+              {location.pathname !== "/Inscription" && <Button
+                text={"Inscription"}
                 backgroundColor={""}
                 textColor={"#FFFFFF"}
                 isHoverActive={true}

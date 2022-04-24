@@ -8,6 +8,7 @@ const ButtonStyle = styled.div`
   align-items: center;
   width: 180px;
   height: 40px;
+  margin: 5px;
   background-color: ${({backgroundColor}) => backgroundColor};
   color: ${({textColor}) => textColor};
   ${({isHoverActive}) => isHoverActive && css`
