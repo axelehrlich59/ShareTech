@@ -2,10 +2,10 @@ import React, { useState, useEffect } from "react";
 import styled from 'styled-components'
 import Logo from "../assets/network.png"
 import Button from "./Button";
+import NavbarItem from "./NavbarItem";
 import { Link, useLocation  } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
-import { isConnectionPage } from "../utils/functions.js"
 
 const StyledLink = styled(Link)`
   text-decoration: none;
@@ -60,30 +60,7 @@ const NavItemsContainer = styled.div`
     display: none;
   }
 `
-const NavItem = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 85px;
-  height: 40px;
-  margin: 5px;
-  cursor: pointer;
-  border: 1.5px solid white;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  &:hover {
-    transition: 0.3s;
-    background-color: white;
-    color: black;
-  }
-  @media (min-width: 768px) and (max-width: 1024px) {
-    width: 100px;
-    height: 50px;
-    font-size: 22px;  
-  }
-`
+
 const BurgerIcon = styled.div`
   display: none;
   @media screen and (max-width: 720px) {
@@ -171,10 +148,10 @@ const Navbar = ({
           </StyledLinkLogo>
           <NavItemsContainer>
             <StyledLink className="styledLink" to="/AboutUs">
-              <NavItem>A propos</NavItem>
+              {location.pathname !== "/AboutUs" && <NavbarItem text={"A propos"}/>}
             </StyledLink>
             <StyledLink className="styledLink" to="/Profil">
-              <NavItem>Profil</NavItem>
+              {location.pathname !== "/Profil" && <NavbarItem text={"Profil"} />}
             </StyledLink>
             <StyledLinkButton to="/Connexion">
               {location.pathname !== "/Connexion" && <Button
