@@ -214,6 +214,9 @@ const Navbar = ({
         <BurgerMenuItems>
           <StyledLink to="/Connexion">Connexion</StyledLink>
         </BurgerMenuItems>
+        <BurgerMenuItems>
+          <StyledLink to="/Inscription">Inscription</StyledLink>
+        </BurgerMenuItems>
         
       </BurgerMenuContainer>}
     </>

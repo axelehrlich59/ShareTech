@@ -47,6 +47,9 @@ const ContainerTitle = styled.div`
   align-items: center;
   font-weight: bold;
   font-size: 26px;
+  @media screen and (max-width: 720px) {
+    font-size: 18px;
+  }
 `
 const ContainerInput = styled.input`
   display: flex;
