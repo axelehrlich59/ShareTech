@@ -10,6 +10,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
+import Inscription from "./Inscription.js";
 
 
 const MainContainer = styled.div`
@@ -31,6 +32,7 @@ function App() {
           <Route path="/AboutUs" element={<About />} />
           <Route path="/Profil" element={<Profil />} />
           <Route path="/Connexion" element={<Connection />} />
+          <Route path="/Inscription" element={<Inscription />} />
         </Routes>
       </Router>
     </MainContainer>

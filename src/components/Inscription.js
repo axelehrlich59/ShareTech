@@ -1,9 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React, {} from "react";
 import styled from 'styled-components'
 import Button from "./Button";
 import { Link } from "react-router-dom";
 
-const MainContainerConnection = styled.div`
+const MainContainerInscription = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,11 +11,11 @@ const MainContainerConnection = styled.div`
   height: 92%;
   font-family: 'DM Sans';
 `
-const ContainerConnection = styled.div`
+const ContainerInscription = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  width: 50%;
+  width: 40%;
   height: 70%;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   @media screen and (max-width: 720px) {
@@ -29,7 +29,7 @@ const MainContainerItems = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 70%;
+  height: 100%;
 `
 const ContainerItemConnection = styled.div`
   display: flex;
@@ -37,12 +37,12 @@ const ContainerItemConnection = styled.div`
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  height: 80%;
+  height: 50%;
 `
 const ContainerTitle = styled.div`
   display: flex;
   width: 100%;
-  height: 10%;
+  height: 18%;
   justify-content: center;
   align-items: center;
   font-weight: bold;
@@ -69,46 +69,31 @@ const ContainerConnectionButton = styled.div`
   width: 100%;
   height: 30%;
 `
-const ContainerSmallText = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-`
-const LinkToInscription = styled(Link)`
-  text-decoration: none;
-  font-weight: bold;
-  color: black;
-`
 
 
-const Connection = () => {
+const Inscription = () => {
 
   return (
-    <MainContainerConnection>
-      <ContainerConnection>
+    <MainContainerInscription>
+      <ContainerInscription>
         <MainContainerItems>
-          <ContainerTitle>Bienvenue,</ContainerTitle>
+          <ContainerTitle>Pas encore inscrit ? C'est par ici :</ContainerTitle>
           <ContainerItemConnection>
-            <ContainerInput placeholder="Identifiant ou email"></ContainerInput>
+            <ContainerInput placeholder="Identifiant"></ContainerInput>
+            <ContainerInput placeholder="Email"></ContainerInput>
             <ContainerInput placeholder="Mot de passe"></ContainerInput>
           </ContainerItemConnection>
-          <ContainerSmallText>
-            <small>Pas encore inscrit ? 
-              <LinkToInscription to="/Inscription"> Cliquez ici</LinkToInscription>
-            </small>
-          </ContainerSmallText>
           <ContainerConnectionButton>
             <Button 
-              text={"Connexion"}
+              text={"Inscription"}
               hideBorder={true}
               boxShadowIsActive={true}
             />
           </ContainerConnectionButton>
         </MainContainerItems>
-      </ContainerConnection>
-    </MainContainerConnection>
+      </ContainerInscription>
+    </MainContainerInscription>
   )
 }
 
-export default Connection
+export default Inscription
