@@ -13,12 +13,14 @@ const StyledLink = styled(Link)`
   &:focus, &:hover, &:visited, &:link, &:active {
     text-decoration: none;
   }
+  &:hover {
+    transition: 0.3s;
+    opacity: 0.7;
+  }
 `
-
 const StyledLinkButton = styled(Link)`
   text-decoration: none;
 `
-
 const NavbarTop = styled.div`
   display: flex;
   justify-content: space-between;
@@ -26,8 +28,6 @@ const NavbarTop = styled.div`
   height: 8%;
   background-color: #292D3E;
   font-family: 'DM Sans';
-  top: 0;
-  position: sticky;
   @media screen and (max-width: 720px) {
     width: 100%;
     height: 10%;
@@ -39,9 +39,11 @@ const SectionContent = styled.div`
   align-items: center;
   width: 100%;
   color: white;
+  font-size: 19px;
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 100%;  
     margin-right: 15px;
+    font-size: 18px;
   }
   @media screen and (max-width: 720px) {
     display: flex;
@@ -60,7 +62,6 @@ const NavItemsContainer = styled.div`
     display: none;
   }
 `
-
 const BurgerIcon = styled.div`
   display: none;
   @media screen and (max-width: 720px) {
@@ -96,7 +97,6 @@ const BurgerMenuItems = styled.div`
     font-family: 'DM Sans';
   }
 `
-
 const StyledLinkLogo = styled(Link)`
   text-decoration: none;
   display: flex;
@@ -105,19 +105,20 @@ const StyledLinkLogo = styled(Link)`
   width: 12%;
   margin-left: 5px;
 `
-
 const Img = styled.img`
   width: 53px;
   border-radius: 15%;
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width: 720px) and (max-width: 1024px) {
     width: 60px;
+    height: 50px;
     margin-right: 10px;
   }
 `
 const TextLogo = styled.div`
   color: white;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   font-weight: bold;
+  margin-left: 10px;
   @media (min-width: 768px) and (max-width: 1024px) {
     font-size: 1.6rem; 
   }
@@ -148,10 +149,13 @@ const Navbar = ({
           </StyledLinkLogo>
           <NavItemsContainer>
             <StyledLink className="styledLink" to="/AboutUs">
-              {location.pathname !== "/AboutUs" && <NavbarItem text={"A propos"}/>}
+              <NavbarItem text={"A propos"}/>
+            </StyledLink>
+            <StyledLink className="styledLink" to="/Post">
+              <NavbarItem text={"Publier"}/>
             </StyledLink>
             <StyledLink className="styledLink" to="/Profil">
-              {location.pathname !== "/Profil" && <NavbarItem text={"Profil"} />}
+              <NavbarItem text={"Profil"} />
             </StyledLink>
             <StyledLinkButton to="/Connexion">
               {location.pathname !== "/Connexion" && <Button
@@ -162,10 +166,12 @@ const Navbar = ({
                 hoverColorText={"black"}
                 IsHoverBackgroundWhite={true}
                 borderColor={"#FFFFFF"}
+                height={"40px"}
+                width={"140px"}
               />}
             </StyledLinkButton>
             <StyledLinkButton to="/Inscription">
-              {location.pathname !== "/Inscription" && <Button
+              <Button
                 text={"Inscription"}
                 backgroundColor={""}
                 textColor={"#FFFFFF"}
@@ -173,7 +179,9 @@ const Navbar = ({
                 hoverColorText={"black"}
                 IsHoverBackgroundWhite={true}
                 borderColor={"#FFFFFF"}
-              />}
+                height={"40px"}
+                width={"140px"}
+              />
             </StyledLinkButton>
           </NavItemsContainer>
         </SectionContent>
@@ -184,6 +192,9 @@ const Navbar = ({
       {showBurgerMenu && <BurgerMenuContainer>
         <BurgerMenuItems>
           <StyledLink to="/AboutUs">A propos</StyledLink>
+        </BurgerMenuItems>
+        <BurgerMenuItems>
+          <StyledLink to="/Post">Publier</StyledLink>
         </BurgerMenuItems>
         <BurgerMenuItems>
           <StyledLink to="/Profil">Profil</StyledLink>

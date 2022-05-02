@@ -103,6 +103,8 @@ const Profil = () => {
             backgroundColor={"#EFF1F0"}
             hideBorder={true}
             boxShadowIsActive={true}
+            height={"40px"}
+            width={"140px"}
           />
         </ContainerSaveButton>
       </ContainerProfil>

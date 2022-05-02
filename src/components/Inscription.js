@@ -91,6 +91,8 @@ const Inscription = () => {
               text={"Inscription"}
               hideBorder={true}
               boxShadowIsActive={true}
+              height={"40px"}
+              width={"140px"}
             />
           </ContainerConnectionButton>
         </MainContainerItems>
