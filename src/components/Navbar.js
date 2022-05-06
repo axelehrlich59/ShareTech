@@ -160,7 +160,7 @@ const Navbar = ({
             <StyledLinkButton to="/Connexion">
               {location.pathname !== "/Connexion" && <Button
                 text={"Connexion"}
-                backgroundColor={""}
+                backgroundColor={"#292D3E"}
                 textColor={"#FFFFFF"}
                 isHoverActive={true}
                 hoverColorText={"black"}
@@ -173,7 +173,7 @@ const Navbar = ({
             <StyledLinkButton to="/Inscription">
               <Button
                 text={"Inscription"}
-                backgroundColor={""}
+                backgroundColor={"#292D3E"}
                 textColor={"#FFFFFF"}
                 isHoverActive={true}
                 hoverColorText={"black"}

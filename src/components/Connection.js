@@ -13,7 +13,7 @@ const MainContainerConnection = styled.div`
   font-family: 'DM Sans';
   background: url(${backgroundImg});
 `
-const ContainerConnection = styled.div`
+const ContainerConnection = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -35,6 +35,8 @@ const MainContainerItems = styled.div`
   justify-content: space-between;
   height: 70%;
   background-color: white;
+`
+const Form = styled.form`
 `
 const ContainerItemConnection = styled.div`
   display: flex;
@@ -91,12 +93,12 @@ const Connection = () => {
 
   return (
     <MainContainerConnection>
-      <ContainerConnection>
+      <ContainerConnection type={"post"}>
         <MainContainerItems>
           <ContainerTitle>Bienvenue,</ContainerTitle>
           <ContainerItemConnection>
-            <ContainerInput placeholder="Identifiant ou email"></ContainerInput>
-            <ContainerInput placeholder="Mot de passe"></ContainerInput>
+            <ContainerInput type={"email"} placeholder="Email"></ContainerInput>
+            <ContainerInput type={"password"} placeholder="Mot de passe"></ContainerInput>
           </ContainerItemConnection>
           <ContainerSmallText>
             <small>Pas encore inscrit ? 

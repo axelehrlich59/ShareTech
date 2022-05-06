@@ -3,7 +3,7 @@ import React from "react";
 import styled, {css} from "styled-components";
 
 
-const ButtonStyle = styled.div`
+const ButtonStyle = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,6 +24,7 @@ const ButtonStyle = styled.div`
   border-color: ${({borderColor}) => borderColor};
   border: ${({hideBorder}) => hideBorder ? "none" : "solid 1.5px"};
   cursor: pointer;
+  font-size: 17px;
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 110px;
     height: 35px;

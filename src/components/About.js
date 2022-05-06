@@ -16,16 +16,17 @@ const AboutMessageContainer = styled.div`
   flex-direction: column;
   text-align: center;
   width: 40%;
-  height: 40%;
+  height: 70%;
   border-bottom: 3px solid black;
   @media screen and (max-width: 720px) {
     width: 80%;
-    height: 90%;
+    height: 80%;
     border: none;
+    font-size: 16px;
   } 
-  @media (min-width: 768px) and (max-width: 1024px) {
+  @media (min-width: 720px) and (max-width: 1024px) {
     width: 70%;  
-    height: 50%;
+    height: 60%;
   }
 `
 const AboutMessageTitleContainer = styled.div`
@@ -45,8 +46,11 @@ const AboutMessageTitle = styled.h1`
   color: black;
   font-family: 'DM Sans';
   font-size: 42px;
+  @media screen and (max-width: 720px) {
+    font-size: 35px;
+  } 
   @media (min-width: 768px) and (max-width: 1024px) {
-    font-size: 54px;
+    font-size: 45px;
   }
 `
 const AboutMessageBodyContainer = styled.h2`

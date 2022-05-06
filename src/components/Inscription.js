@@ -13,7 +13,7 @@ const MainContainerInscription = styled.div`
   font-family: 'DM Sans';
   background: url(${backgroundImg});
 `
-const ContainerInscription = styled.div`
+const ContainerInscription = styled.form`
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -82,13 +82,13 @@ const Inscription = () => {
 
   return (
     <MainContainerInscription>
-      <ContainerInscription>
+      <ContainerInscription type={"post"}>
         <MainContainerItems>
           <ContainerTitle>Pas encore inscrit ? C'est par ici :</ContainerTitle>
           <ContainerItemConnection>
-            <ContainerInput placeholder="Identifiant"></ContainerInput>
-            <ContainerInput placeholder="Email"></ContainerInput>
-            <ContainerInput placeholder="Mot de passe"></ContainerInput>
+            <ContainerInput type={"text"} placeholder="Identifiant"></ContainerInput>
+            <ContainerInput type={"email"} placeholder="Email"></ContainerInput>
+            <ContainerInput type={"password"} placeholder="Mot de passe"></ContainerInput>
           </ContainerItemConnection>
           <ContainerConnectionButton>
             <Button 
