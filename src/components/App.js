@@ -27,20 +27,21 @@ const MainContainer = styled.div`
 
 function App() {
   return (
-    <MainContainer>
-      <Router>
-        <Navbar />
-        <Routes>
-          <Route path="/" element={""} />
-          <Route path="/AboutUs" element={<About />} />
-          <Route path="/Post" element={<PublishArticle />} />
-          <Route path="/Profil" element={<Profil />} />
-          <Route path="/Connexion" element={<Connection />} />
-          <Route path="/Inscription" element={<Inscription />} />
-        </Routes>
-      </Router>
-      <Home />
-    </MainContainer>
+    <>
+      <MainContainer>
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Home />} exact/>
+            <Route path="/AboutUs" element={<About />} />
+            <Route path="/Post" element={<PublishArticle />} />
+            <Route path="/Profil" element={<Profil />} />
+            <Route path="/Connexion" element={<Connection />} />
+            <Route path="/Inscription" element={<Inscription />} />
+          </Routes>
+        </Router>
+      </MainContainer>
+    </>
   );
 }
 
