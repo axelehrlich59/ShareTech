@@ -2,6 +2,7 @@ import React, {useEffect, useState} from "react";
 import styled from 'styled-components'
 import Button from "./Button";
 import { Link } from "react-router-dom";
+import backgroundImg from "../assets/educational-bg.jpg"
 
 const MainContainerConnection = styled.div`
   display: flex;
@@ -10,6 +11,7 @@ const MainContainerConnection = styled.div`
   width: 100%;
   height: 92%;
   font-family: 'DM Sans';
+  background: url(${backgroundImg});
 `
 const ContainerConnection = styled.div`
   display: flex;
@@ -24,12 +26,15 @@ const ContainerConnection = styled.div`
   @media (min-width: 768px) and (max-width: 1024px) {
     width: 90%;
   }
+  border-radius: 15px;
+  background-color: white;
 `
 const MainContainerItems = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   height: 70%;
+  background-color: white;
 `
 const ContainerItemConnection = styled.div`
   display: flex;

@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import styled from 'styled-components'
 import PublishArticle from "./PublishArticle";
 import AvatarImg from "../assets/img_avatar3.png"
+import backgroundImg from "../assets/educational-bg.jpg"
 
 
 const MainContainerArticlesPublished = styled.div`
@@ -13,6 +14,7 @@ const MainContainerArticlesPublished = styled.div`
   height: 100%;
   border-bottom: 2.5px solid black;
   overflow: auto;
+  background: url(${backgroundImg});
 `
 
 const ContainerArticle = styled.div`
@@ -21,6 +23,7 @@ const ContainerArticle = styled.div`
   width: 1000px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   border-radius: 15px;
+  background-color: white;
 `
 const ContainerPictureArticle = styled.div`
   display: flex;

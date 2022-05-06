@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import AvatarImg from "../assets/img_avatar3.png"
 import ProfilElement from "./ItemProfile";
 import Button from "./Button";
+import backgroundImg from "../assets/educational-bg.jpg"
 
 const  MainContainerProfile = styled.div`
   display: flex;
@@ -11,6 +12,7 @@ const  MainContainerProfile = styled.div`
   width: 100%;
   height: 92%;
   font-family: 'DM Sans';
+  background: url(${backgroundImg});
 `
 const  ContainerProfil = styled.div`
   display: flex;
@@ -23,7 +25,8 @@ const  ContainerProfil = styled.div`
   @media screen and (max-width: 720px) {
     width: 80%;
   }
-  border-radius: 5px;
+  border-radius: 15px;
+  background-color: white;
 `
 const ContainerProfilPicture = styled.div`
   display: flex;
