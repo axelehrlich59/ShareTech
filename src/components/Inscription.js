@@ -1,8 +1,11 @@
-import React, {} from "react";
+import React, { useState } from "react";
 import styled from 'styled-components'
-import Button from "./Button";
 import { Link } from "react-router-dom";
 import backgroundImg from "../assets/educational-bg.jpg"
+import { useForm } from "react-hook-form";
+import LabelError from "./LabelErrorMessage";
+import FormHooks from "./FormHooks";
+//import { faTimes } from "@fortawesome/free-solid-svg-icons";
 
 const MainContainerInscription = styled.div`
   display: flex;
@@ -82,25 +85,7 @@ const Inscription = () => {
 
   return (
     <MainContainerInscription>
-      <ContainerInscription type={"post"}>
-        <MainContainerItems>
-          <ContainerTitle>Pas encore inscrit ? C'est par ici :</ContainerTitle>
-          <ContainerItemConnection>
-            <ContainerInput type={"text"} placeholder="Identifiant"></ContainerInput>
-            <ContainerInput type={"email"} placeholder="Email"></ContainerInput>
-            <ContainerInput type={"password"} placeholder="Mot de passe"></ContainerInput>
-          </ContainerItemConnection>
-          <ContainerConnectionButton>
-            <Button 
-              text={"Inscription"}
-              hideBorder={true}
-              boxShadowIsActive={true}
-              height={"40px"}
-              width={"140px"}
-            />
-          </ContainerConnectionButton>
-        </MainContainerItems>
-      </ContainerInscription>
+      <FormHooks/>
     </MainContainerInscription>
   )
 }
