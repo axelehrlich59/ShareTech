@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styled from 'styled-components'
-import Logo from "../assets/network.png"
-import Button from "./Button";
+import Logo from "../../assets/network.png"
+import Button from "../Button/Index";
 import NavbarItem from "./NavbarItem";
 import { Link, useLocation  } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

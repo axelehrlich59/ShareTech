@@ -1,7 +1,7 @@
 import React, {useState} from "react";
 import styled from 'styled-components'
 import TextArea from "./TextArea";
-import Button from "../Button";
+import Button from "../Button/Index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 

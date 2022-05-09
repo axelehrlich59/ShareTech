@@ -1,9 +1,9 @@
 import React from "react";
 import styled from 'styled-components'
-import AvatarImg from "../assets/img_avatar3.png"
+import AvatarImg from "../../assets/img_avatar3.png"
 import ProfilElement from "./ItemProfile";
-import Button from "./Button";
-import backgroundImg from "../assets/educational-bg.jpg"
+import Button from "../Button/Index";
+import backgroundImg from "../../assets/educational-bg.jpg"
 
 const  MainContainerProfile = styled.div`
   display: flex;
