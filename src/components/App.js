@@ -1,9 +1,9 @@
 import React from "react";
-import Navbar from "./Navbar.js"
-import About from "./About.js";
-import Profil from "./Profil.js";
-import Connection from "./Connection.js";
-import Home from "./Home.js";
+import Navbar from "./Navbar/index.js"
+import About from "../components/About/index.js";
+import Profil from "./Profil/Index.js";
+import Connection from "../components/Connection/index.js";
+import HomePage from "./HomePage/Index.js";
 import PublishArticle from "./PublishArticle/index.js";
 import styled from 'styled-components'
 import '../index.css'
@@ -12,7 +12,7 @@ import {
   Route,
   Routes,
 } from "react-router-dom";
-import Inscription from "./Inscription.js";
+import Inscription from "./Inscription/Index.js";
 
 
 const MainContainer = styled.div`
@@ -32,7 +32,7 @@ function App() {
         <Router>
           <Navbar />
           <Routes>
-            <Route path="/" element={<Home />} exact/>
+            <Route path="/" element={<HomePage />} exact/>
             <Route path="/AboutUs" element={<About />} />
             <Route path="/Post" element={<PublishArticle />} />
             <Route path="/Profil" element={<Profil />} />

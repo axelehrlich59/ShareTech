@@ -1,8 +1,8 @@
 import React, {useEffect, useState} from "react";
 import styled from 'styled-components'
-import Button from "./Button";
+import Button from "../Button/Index";
 import { Link } from "react-router-dom";
-import backgroundImg from "../assets/educational-bg.jpg"
+import backgroundImg from "../../assets/educational-bg.jpg"
 
 const MainContainerConnection = styled.div`
   display: flex;
