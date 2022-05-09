@@ -4,6 +4,7 @@ import AvatarImg from "../../assets/img_avatar3.png"
 import ProfilElement from "./ItemProfile";
 import Button from "../Button/Index";
 import backgroundImg from "../../assets/educational-bg.jpg"
+import { featureNotAvailableYet } from "../../utils/functions"
 
 const  MainContainerProfile = styled.div`
   display: flex;
@@ -108,6 +109,7 @@ const Profil = () => {
             boxShadowIsActive={true}
             height={"40px"}
             width={"140px"}
+            onClick={featureNotAvailableYet}
           />
         </ContainerSaveButton>
       </ContainerProfil>

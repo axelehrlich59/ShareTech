@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import PublishArticle from "../PublishArticle";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faE, faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { featureNotAvailableYet } from "../../utils/functions"
 
 const ContainerArticle = styled.div`
   display: flex;
@@ -126,11 +127,11 @@ const ArticleDisplay = ({
           {text}
         </ContainerTextArticle>
         <ContainerCrud>
-          <ContainerIconTrash>
-            <IconTrash icon={faTrash} />
+          <ContainerIconTrash onClick={featureNotAvailableYet}>
+            <IconTrash icon={faTrash}/>
           </ContainerIconTrash>
-          <ContainerIconEdit>
-            <IconEdit icon={faEdit} />
+          <ContainerIconEdit onClick={featureNotAvailableYet}>
+            <IconEdit icon={faEdit}/>
           </ContainerIconEdit>
         </ContainerCrud>
       </ContainerArticle>
