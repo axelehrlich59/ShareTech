@@ -4,12 +4,14 @@ import TextArea from "./TextArea";
 import Button from "../Button/Index";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEyeSlash } from "@fortawesome/free-solid-svg-icons";
+import backgroundImg from "../../assets/educational-bg.jpg"
 
 const MainContainerPublicationArticle = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
   height: 92%;
+  background: url(${backgroundImg});
 `
 
 const PublicationArticleContainer = styled.div`
