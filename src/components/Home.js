@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import PublishArticle from "./PublishArticle";
 import AvatarImg from "../assets/img_avatar3.png"
 import backgroundImg from "../assets/educational-bg.jpg"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faE, faEdit, faTrash } from "@fortawesome/free-solid-svg-icons";
 
 
 const MainContainerArticlesPublished = styled.div`
@@ -16,7 +18,6 @@ const MainContainerArticlesPublished = styled.div`
   overflow: auto;
   background: url(${backgroundImg});
 `
-
 const ContainerArticle = styled.div`
   display: flex;
   height: 650px;
@@ -59,7 +60,6 @@ const ContainerUserName = styled.div`
   font-size: 20px;
   color: black;
 `
-
 const ContainerTextArticle = styled.div`
   display: flex;
   height: 630px;
@@ -68,11 +68,55 @@ const ContainerTextArticle = styled.div`
   font-size: 18px;
   font-weight: lighter;
 `
-
 const Img = styled.img`
   width: 120px;
   height: 120px;
   border-radius: 50%;
+`
+const ContainerCrud = styled.div`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80px;
+  height: 70px;
+  margin-top: 20px;
+`
+const ContainerIconTrash = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 5px;
+  :hover {
+    transform: translateY(-2px);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 10px 10px, rgba(0, 0, 0, 0.13) 0px 2px 2px;
+    transition: 0.6s;
+  }
+  cursor: pointer;
+`
+const ContainerIconEdit = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  padding: 5px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+  border-radius: 5px;
+  :hover {
+    transform: translateY(-2px);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 10px 10px, rgba(0, 0, 0, 0.13) 0px 2px 2px;
+    transition: 0.6s;
+  }
+  cursor: pointer;
+`
+const IconTrash = styled(FontAwesomeIcon)`
+  color: #F16C63;
+`
+const IconEdit = styled(FontAwesomeIcon)`
+  color: #5c95ff;
 `
 
 
@@ -94,6 +138,14 @@ const Home = () => {
         <ContainerTextArticle>
           {loremIpsum}
         </ContainerTextArticle>
+        <ContainerCrud>
+          <ContainerIconTrash>
+            <IconTrash icon={faTrash} />
+          </ContainerIconTrash>
+          <ContainerIconEdit>
+            <IconEdit icon={faEdit} />
+          </ContainerIconEdit>
+        </ContainerCrud>
       </ContainerArticle>
     </MainContainerArticlesPublished>
     <MainContainerArticlesPublished>
